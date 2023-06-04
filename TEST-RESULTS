@@ -1,1 +1,65 @@
+Sistemsko testiranje Calculator programa mozemo obaviti pomocu vise vrsta provera kako bi identifikovali potencijalne softverske greške, nedostatke ili propuste u kodu:
 
+Testiranje granica:
+1) Proveriti da li kalkulator ispravno rukuje ekstremnim vrednostima, poput veoma velikih ili veoma malih brojeva.
+2) Proveriti da li se kalkulator pravilno ponaša kada su uneti vrlo veliki ili vrlo mali brojevi.
+
+      Izraz: "1000000 + 500000"
+      Očekivani rezultat: 1500000
+      
+      Izraz: "0.00001 + 0.00002"
+      Očekivani rezultat: 0.00003
+
+Testiranje operacija:
+1) Proveriti da li se sve aritmetičke operacije (sabiranje, oduzimanje, množenje, deljenje) izvršavaju ispravno.
+
+      Testiranje sabiranja:
+      Izraz: "2 + 4"
+      Očekivani rezultat: 6
+      
+      Testiranje oduzimanja:
+      Izraz: "9 - 4"
+      Očekivani rezultat: 5
+      
+      Testiranje množenja:
+      Izraz: "5 * 7"
+      Očekivani rezultat: 35
+      
+      Testiranje deljenja:
+      Izraz: "8 / 2"
+      Očekivani rezultat: 4
+      
+2) Proveriti da li se kalkulator pravilno ponaša kada se unese izraz koji sadrži kombinaciju operacija.
+
+      Izraz: "4 + 2 * 3 - 8 / 4"
+      Očekivani rezultat: 8
+
+3) Proveriti da li se kalkulator pravilno ponaša kada se izvršava deljenje nulom.
+
+      Izraz: "6 / 0"
+      Očekivani rezultat: Greška (npr. "ERROR")
+      
+      Izraz: "0 / 6"
+      Očekivani rezultat: 0
+      
+4) Proveriti da li se kalkulator pravilno ponaša kada se izvršavaju operacije s decimalnim brojevima.
+
+      Izraz: "8.44 / 2.18"
+      Očekivani rezultat: 3.87155963
+
+Testiranje obrade grešaka:
+1) Proveriti da li se kalkulator pravilno ponaša kada se unese nevalidan izraz, poput izraza koji sadrži nepoznate operacije ili neispravno formatirane brojeve.
+
+      Izraz: "2 + 3 - * 4"
+      Očekivani rezultat: Greška (npr. "ERROR")
+      
+      Izraz: "2 + 3 - 4..2"
+      Očekivani rezultat: Greška (npr. "ERROR")
+
+Testiranje performansi:
+1) Proveriti kako se kalkulator ponaša pri radu s velikim brojem iteracija.
+      
+      Izraz: "1000000 + 0.00001 - 500000 - 22 * 4 + 0.00008 - 1000 / 25"
+      Očekivani rezultat: 499872.00009
+      
+2) Proveriti da li se kalkulator izvršava brzo i efikasno bez nepotrebnog kašnjenja ili zauzimanja resursa.
