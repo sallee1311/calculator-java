@@ -1,1 +1,41 @@
+LOC za fajlove Calculator.java i Start.java zbirno iznosi 214 (188 i 26).
+Koristeci alat Codalyze za dobijanje ciklomatske i kognitivne slozenosti metoda evaluateExpression i Calculate, dobijeni su sledeci rezultati:
+ - metoda evaluateExpression: 12
+ - metoda Calculate: 15
+ 
+Neformalnim pregledom koda izvedena su sledeca zapazanja:
+
+Start.java - Linije 3-8 - U ovim linijama su uključeni neophodni importi i definisana je klasa Start.
+Start.java - Linija 10 - Definisan je glavni metod (main), koji predstavlja ulaznu tačku programa.
+Start.java - Linija 11 - Deklaracija i inicijalizacija promenljive Expression.
+Start.java - Linija 12 - Deklaracija i inicijalizacija promenljive active.
+Start.java - Linija 13 - Ispisuje se poruka za unos korisnika.
+Start.java - Linija 14 - Deklaracija objekta Scanner.
+Start.java - Linija 16 - Počinje petlja while koja čita unos korisnika i obrađuje ga sve dok se ne unese "exit".
+Start.java - Linija 17 - Unos korisnika se smešta u promenljivu Expression.
+Start.java - Linija 19-21 - Ako je uneseno "exit", petlja se prekida i program se završava.
+Start.java - Linija 23 - Poziva se metoda Calculator.Run() za evaluaciju izraza i ispis rezultata.
+
+Calculator.java - Linije 1-25 - U ovim linijama se definiše klasa Calculator i ugnježđena klasa Operations. Klasa Operations definiše konstante za različite aritmetičke simbole.
+Calculator.java - Linija 27 - Deklaracija promenljive finalResult.
+Calculator.java - Linija 30-39 - Definisana je metoda Run(), koja predstavlja ulaznu tačku za evaluaciju izraza.
+Calculator.java - Linija 41-80 - Definisana je metoda evaluateExpression(), koja uzima izraz kao ulaz i vrši evaluaciju.
+Calculator.java - Linija 83-159 - Definisana je metoda Calculate(), koja rekurzivno izračunava rezultat na osnovu parsiranih brojeva i operacija.
+Calculator.java - Linija 162-173 - Metoda parsira brojeve i operacije i vrši potrebne izračune.
+Calculator.java - Linija 175 - Konačan rezultat se konvertuje u string i vraća.
+
+Staticka analiza koda Start.java:
+Nedoslednosti i propusti: 
+1) Nema eksplicitne obrade gresaka prilikom unosa i evaluacije izraza. Trebalo bi dodati mehanizam za obradu nevalidnog unosa i gresaka prilikom izracunavanja.
+2) Nedostaje komentar koji bi opisao svrhu programa i nacin koriscenja.
+Sumnjivi delovi koda (Code Smells): 
+1) U petlji se kreira novi Scanner objekat prilikom svake iteracije. Umesto toga, trebalo bi da se Scanner objekat kreira samo jednom van petlje i koristi se za citanje unosa u svakoj iteraciji.
+
+Staticka analiza koda Calculator.java:
+Nedoslednosti i propusti: 
+1) Nema obrade gresaka prilikom deljenja nulom ili drugih potencijalnih gresaka prilikom izracunavanja. Trebalo bi dodati proveru i odgovarajuce reakcije na takve slucajeve.
+2) Nedostaje dokumentacija ili komentari koji bi opisali svrhu i funkcionalnost metoda evaluateExpression i Calculate.
+Sumnjivi delovi koda (Code Smells): 
+1) Metoda evaluateExpression ima dugacku implementaciju sa mnogo uslovnih izjava, sto moze otezati odrzavanje i razumevanje koda. Razmatranje modularizacije i rastavljanje slozenih operacija na manje delove moze poboljsati citljivost i odrzavanje koda.
+2) Metoda Calculate koristi rekurziju za obradu operacija, sto moze biti slozeno za razumevanje i pracenje toka izvrsavanja. Razmatranje alternativnih pristupa moze dovesti do jednostavnijeg koda.
 
